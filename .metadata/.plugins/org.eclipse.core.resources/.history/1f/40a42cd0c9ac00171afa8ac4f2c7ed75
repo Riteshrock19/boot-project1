@@ -1,0 +1,18 @@
+package com.app.util;
+
+import java.util.LinkedHashMap;
+import java.util.Map;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class UomUtil {
+    
+	public Map<String, String> getUomTypes(){
+		Map<String, String> uomTypes = new LinkedHashMap<String, String>();
+		uomTypes.put("PACK", "PACKING");
+		uomTypes.put("NOPACK", "NO PACKING");
+		uomTypes.put("NA", "-NA-");
+		return uomTypes;
+	}
+}

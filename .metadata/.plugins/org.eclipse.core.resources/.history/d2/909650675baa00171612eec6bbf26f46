@@ -1,0 +1,44 @@
+package com.app.model;
+
+import java.util.Date;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+
+import org.hibernate.annotations.GenericGenerator;
+
+@Entity
+@Table(name="uom_tab")
+public class Uom {
+
+
+	@Id
+	@Column(name="u_id")
+	@GeneratedValue(generator="uomgen")
+	@GenericGenerator(name="uomgen",strategy="increment")
+	private long uomId;
+	
+	@Column(name="u_type")
+	private String uomType;
+	
+	@Column(name="u_model")
+	private String uomModel;
+	
+	@Column(name="u_cdate")
+	@Temporal(TemporalType.TIMESTAMP)
+	private Date createdDate;
+	
+	@Column(name="u_lmdate")
+	@Temporal(TemporalType.TIMESTAMP)
+	private Date lastModifiedDate;
+	
+	@Column(name="u_des")
+	private String description;
+	
+	
+}

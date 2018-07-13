@@ -1,0 +1,5 @@
+package com.app.provider;
+
+public class UomRestController {
+
+}
